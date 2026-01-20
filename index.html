@@ -10,6 +10,55 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
+	  /* Layout for the team grid */
+	.team-grid {
+	  display: flex;
+	  flex-wrap: wrap;
+	  justify-content: center;
+	  gap: 2rem;
+	  padding: 2rem;
+	}
+
+	.member {
+	  text-align: center;
+	  width: 150px; /* Adjust based on preference */
+	}
+
+	/* THE PICTURE FRAME STYLES */
+	.frame {
+	  width: 120px;
+	  height: 120px;
+	  margin: 0 auto 1rem auto; /* Centers the frame */
+	  
+	  /* Frame Design */
+	  border-radius: 50%; /* Makes it circular. Remove this line for square */
+	  border: 4px solid #ffffff; /* Inner border */
+	  box-shadow: 0 0 0 2px #333, /* Outer border (creates frame effect) */
+				  0 10px 15px rgba(0,0,0,0.2); /* Drop shadow for depth */
+	  
+	  overflow: hidden; /* Crops the image to the frame shape */
+	  background-color: #ddd; /* Fallback color */
+	}
+
+	/* Image styling to ensure photos don't stretch */
+	.frame img {
+	  width: 100%;
+	  height: 100%;
+	  object-fit: cover; /* Ensures image fills frame without distortion */
+	  display: block;
+	}
+
+	/* Text Styling */
+	.member h4 {
+	  margin: 0.5rem 0 0.2rem 0;
+	  font-size: 0.9rem;
+	  font-weight: bold;
+	}
+
+	.member span {
+	  font-size: 0.8rem;
+	  color: #666;
+	}
     :root {
       /* === SIMPLE & UNIQUE PALETTE === */
       --bg-body: #f4f5f0;        /* Natural Stone */
@@ -239,40 +288,91 @@
   <main class="container">
 
     <section id="home" class="reveal" style="text-align: center; padding-top: 40px;">
-      <span style="color: var(--accent); font-weight: 700; letter-spacing: 2px; font-size: 0.8rem; display: block; margin-bottom: 20px;">RESEARCH PORTAL</span>
+      <span style="color: var(--accent); font-weight: 700; letter-spacing: 2px; font-size: 0.8rem; display: block; margin-bottom: 20px;">INTERACTIVE CENTRE</span>
       <h1>Nature Meets<br>Commerce.</h1>
-      <p style="text-align: center;">A curated look at the economic value of plant life. Documenting marine algae, fungi, ferns, and village crops in Malaysia.</p>
+      
     </section>
 
-    <section id="overview" class="reveal">
-      <h2>Project Overview</h2>
+   <section id="overview" class="reveal">
+      <p style="text-align: center; max-width: 700px; margin: 0 auto 50px auto;">
+        An exploration of <strong>Economic Botany</strong>: bridging the gap between biological diversity and commercial utility. We examine how distinct organisms—from marine life to village crops—sustain local communities and global markets.
+      </p>
+      
       <div class="grid">
         <article class="card">
-          <h3>Analysis</h3>
-          <p>Dissecting plant anatomy relative to commercial processing.</p>
+          <div style="font-size: 2rem; margin-bottom: 10px;"></div>
+          <h3>Botany & Economy</h3>
+          <p>Investigating the intersection of plant biology and commerce. We analyze how plant anatomy drives processing methods, market value, and industrial application.</p>
         </article>
+
         <article class="card">
-          <h3>Documentation</h3>
-          <p>Scientific naming, habitat mapping, and macro-photography.</p>
+          <div style="font-size: 2rem; margin-bottom: 10px;"></div>
+          <h3>Organism Diversity</h3>
+          <p>Beyond standard crops. Our research highlights the economic importance of a wide variety of organisms, including marine algae, fungi, and pteridophytes (ferns).</p>
         </article>
+
         <article class="card">
-          <h3>Taxonomy</h3>
-          <p>Classification into Food, Industrial, and Forest products.</p>
+          <div style="font-size: 2rem; margin-bottom: 10px;"></div>
+          <h3>Lenggeng Survey</h3>
+          <p>A comprehensive field identification survey of planted species in <strong>Lenggeng Village</strong>. Documenting the taxonomy and usage of ornamental, culinary, and medicinal plants in a rural setting.</p>
         </article>
       </div>
     </section>
 
     <section id="team" class="reveal">
-      <h2>Our Team</h2>
-      <div class="team-grid">
-        <div class="member"><div class="avatar">EK</div><h4>Emerald Keith</h4><span>Research</span></div>
-        <div class="member"><div class="avatar">MI</div><h4>M. Irfan</h4><span>Field Obs.</span></div>
-        <div class="member"><div class="avatar">DK</div><h4>Danish K.</h4><span>Specimens</span></div>
-        <div class="member"><div class="avatar">AA</div><h4>Abdul Aziz</h4><span>Analysis</span></div>
-        <div class="member"><div class="avatar">DH</div><h4>Dhia Haziq</h4><span>Taxonomy</span></div>
-        <div class="member"><div class="avatar">MN</div><h4>Marquis N.</h4><span>Literature</span></div>
+  <h2>Our Team</h2>
+  <div class="team-grid">
+    
+    <div class="member">
+      <div class="frame">
+        <img src="https://i.ibb.co/r2TrQQbV/Whats-App-Image-2026-01-20-at-21-48-30.jpg" alt="Emerald Keith">
       </div>
-    </section>
+      <h4>EMERALD KEITH</h4>
+      <span>23006126</span>
+    </div>
+
+    <div class="member">
+      <div class="frame">
+        <img src="https://i.ibb.co/Dg11n0Z4/Whats-App-Image-2026-01-20-at-21-56-21.jpg" alt="Irfan Zaim">
+      </div>
+      <h4>IRFAN ZAIM</h4>
+      <span>23005998</span>
+    </div>
+
+    <div class="member">
+      <div class="frame">
+        <img src="https://i.ibb.co/nqHDbRDh/Untitled-design-5.png" alt="Danish Kurniawan">
+      </div>
+      <h4>DANISH KURNIAWAN</h4>
+      <span>22001076</span>
+    </div>
+
+    <div class="member">
+      <div class="frame">
+        <img src="https://i.ibb.co/RpQ6JCGh/Whats-App-Image-2026-01-20-at-23-07-55.jpg"  alt="Abdul Aziz">
+      </div>
+      <h4>ABDUL AZIZ</h4>
+      <span>23006174</span>
+    </div>
+
+    <div class="member">
+      <div class="frame">
+        <img src="https://i.ibb.co/Wp64pzw0/2026-01-20-23-03-27.jpg" alt="Dhia Haziq">
+      </div>
+      <h4>DHIA HAZIQ</h4>
+      <span>23065610</span>
+    </div>
+
+    <div class="member">
+      <div class="frame">
+        <img src="https://i.ibb.co/pvwr97Bq/Whats-App-Image-2026-01-20-at-22-05-24.jpg"  alt="Marquis Nelson">
+      </div>
+      <h4>MARQUIS NELSON</h4>
+      <span>23006063</span>
+    </div>
+
+  </div>
+</section>
 
     <section id="practical-1" class="reveal">
       <h2>Practical 1: Algae & Fungi</h2>
@@ -654,7 +754,7 @@
           </div>
         </article>
         <article class="list-card" data-type="ornamental">
-          <img src= "https://i.ibb.co/0VpW8nCm/C2.jpg" alt="Moss Rose" class="card-img">
+          <img src= "https://i.ibb.co/HLMpyr9d/2026-01-20-22-25-56.jpg" alt="Moss Rose" class="card-img">
           <div class="card-content">
             <div class="card-title">Moss Rose</div>
             <span class="card-sci">Portulaca grandiflora</span>
@@ -663,7 +763,7 @@
           </div>
         </article>
         <article class="list-card" data-type="ornamental">
-          <img src= "https://i.ibb.co/mCqrtFdB/C3.jpg" alt="Scarlet Glory" class="card-img">
+          <img src= "https://i.ibb.co/GzxbZs2/2026-01-20-22-22-54.jpg"alt="Scarlet Glory" class="card-img">
           <div class="card-content">
             <div class="card-title">Scarlet Glory</div>
             <span class="card-sci">Bougainvillea glabra</span>
@@ -672,7 +772,7 @@
           </div>
         </article>
         <article class="list-card" data-type="ornamental">
-          <img src= "https://i.ibb.co/B2hGBg9C/C4.jpg" alt="Crown of Thorns" class="card-img">
+          <img src= "https://i.ibb.co/84K0TWHz/2026-01-20-22-21-02.jpg" alt="Crown of Thorns" class="card-img">
           <div class="card-content">
             <div class="card-title">Crown of Thorns</div>
             <span class="card-sci">Euphorbia milii</span>
@@ -699,7 +799,7 @@
           </div>
         </article>
         <article class="list-card" data-type="ornamental">
-          <img src= "https://i.ibb.co/3y3Tk4H2/C7.jpg" alt="Slipper Flower" class="card-img">
+          <img src= "https://i.ibb.co/4wb3wcyQ/2026-01-20-22-09-59.jpg"  alt="Slipper Flower" class="card-img">
           <div class="card-content">
             <div class="card-title">Slipper Flower</div>
             <span class="card-sci">Euphorbia tithymaloides</span>
@@ -718,7 +818,7 @@
           </div>
         </article>
         <article class="list-card" data-type="ornamental">
-        <img src="https://i.ibb.co/wF2mYByr/C9.jpg" alt="ZZ Plant" class="card-img">
+        <img src= "https://i.ibb.co/DH3rGdQj/2026-01-20-22-11-37.jpg"  alt="ZZ Plant" class="card-img">
           <div class="card-content">
             <div class="card-title">ZZ Plant</div>
             <span class="card-sci">Zamioculcas zamiifolia</span>
@@ -727,7 +827,7 @@
           </div>
         </article>
         <article class="list-card" data-type="ornamental">
-          <img src="https://i.ibb.co/ymPcRHqF/C10.jpg"  alt="Fern" class="card-img">
+          <img src= "https://i.ibb.co/gLXnDT79/Screenshot-2026-01-20-at-10-59-01-PM.png" alt="Fern" class="card-img">
           <div class="card-content">
             <div class="card-title">Schizostachyum (Bamboo)</div>
             <span class="card-sci">Schizostachyum sp.</span>
@@ -736,7 +836,7 @@
           </div>
         </article>
         <article class="list-card" data-type="culinary">
-          <img src="https://i.ibb.co/RppGKBZp/C11.jpg" alt="Lemongrass" class="card-img">
+          <img src= "https://i.ibb.co/Y7yBm2MC/lemon-grass.jpg"  alt="Lemongrass" class="card-img">
           <div class="card-content">
             <div class="card-title">Lemongrass</div>
             <span class="card-sci">Cymbopogon sp.</span>
@@ -772,7 +872,7 @@
           </div>
         </article>
         <article class="list-card" data-type="ornamental">
-          <img src= "https://i.ibb.co/d4qbN8q2/C15.jpg" alt="Schismatoglottis" class="card-img">
+          <img src= "https://i.ibb.co/204rTvwP/C17.jpg" alt="Schismatoglottis" class="card-img">
           <div class="card-content">
             <div class="card-title">Schismatoglottis</div>
             <span class="card-sci">Schismatoglottis wallichii</span>
@@ -791,7 +891,7 @@
           </div>
         </article>
         <article class="list-card" data-type="culinary">
-          <img src= "https://i.ibb.co/tMM1JWny/C17.jpg" alt="Brazilian Spinach" class="card-img">
+          <img src= "https://i.ibb.co/ymm4dLdP/bayam-brassil.jpg" alt="Brazilian Spinach" class="card-img">
           <div class="card-content">
             <div class="card-title">Brazilian Spinach</div>
             <span class="card-sci">Alternanthera sissoo</span>
@@ -800,7 +900,7 @@
           </div>
         </article>
         <article class="list-card" data-type="culinary">
-          <img src= "https://i.ibb.co/274HZGf0/C18.jpg" alt="Ulam" class="card-img">
+          <img src= "https://i.ibb.co/LdgjYXSb/ulam-raja.jpg" alt="Ulam" class="card-img">
           <div class="card-content">
             <div class="card-title">Ulam Raja (Cosmos)</div>
             <span class="card-sci">Cosmos caudatus</span>
@@ -871,7 +971,7 @@
         <article class="list-card" data-type="culinary">
           <img src="https://i.ibb.co/pvBfqn41/IMG-20260120-164101-379.jpg" alt="Pandan" class="card-img">
           <div class="card-content">
-            <div class="card-title">Pandan Wangi</div>
+            <div class="card-title">Pandan</div>
             <span class="card-sci">Pandanus sp.</span>
             <div class="card-meta"><span class="meta-tag">Herb</span></div>
             <div class="card-desc">Culinary herb essential for fragrance in Malaysian cuisine. Local and regional commercial cultivation.</div>
